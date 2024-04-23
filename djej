@@ -1,0 +1,220 @@
+_G.Streamable = {
+    Key = "e",
+    Aiming = "Namecall",
+    Mode = "Always", -- "Toggle" or "Hold" or "Always"
+    ["Face-Target"] = false,
+    Notifs = false,
+    Chat = false,
+    View = false,
+    SilentAim = {
+        Toggle = true,
+        OnlyWhenInFov = true,
+        OnlyWhenVisible = true,
+        Parts = {"All","HumanoidRootPart","UpperTorso","LowerTorso"},
+        FOV = {
+            Toggle = true,
+            Color = Color3.fromRGB(119,0,255),
+            Size = 100,
+            Thickness = 0,
+            Filled = false,
+            Transparency = 0,
+            Rainbow =false,
+        },
+        Prediction = 0.12643,
+        AutoPred = true,
+        ["Jump-Function"] = false,
+        ["Jump-Pred"] = 0.12431,
+        Hitchance=100,
+        JumpOffset = false,
+        JumpOffsetVal = 0, -- Negative for Down | Positive for Up
+        AntiCurve = false, -- makes your player face the enemy's predicted position once you shoot
+    },
+    Tracing = {
+        Enabled = true,
+        Smoothness = 0.025,
+        OnlyWhenInFov = true,
+        OnlyWhenVisible = true,
+        Parts = {"All","HumanoidRootPart","UpperTorso","LowerTorso"},
+        Method = "New", -- "New" or "Classic" or "Off" <- Off IS THE MOST BLATANT
+        Style = "Elastic", -- Enum.EasingStyle
+        Direction = "InOut", -- Enum.EasingDirection
+        Prediction = 0.12643,
+        AutoPred = false,
+        ["Jump-Function"] = false,
+        ["Jump-Pred"] = 0.12431,
+        JumpOffset = false,
+        JumpOffsetVal = 0, -- Negative for Down | Positive for Up
+        FOV = {
+            Toggle = true,
+            Color = Color3.fromRGB(255,0,0),
+            Size = 60,
+            Thickness = 2,
+            Filled = false,
+            Transparency = 0,
+            Rainbow = false,
+        },
+        Shake = {
+            On = false,
+            LeftRight = 0,
+            UpDown = 0,
+        }, -- _G.Streamable.Tracing.Shake.On,_G.Streamable.Tracing.Shake.LeftRight,_G.Streamable.Tracing.Shake.UpDown
+    },
+    Resolvers = {
+        V1 = false,
+        ["V1-Delay"] = 0.085,
+        V2 = false,
+        ["V2-Smoothing"] = 20,
+        Aimpart = "HumanoidRootPart",
+        AntiSky = false,
+        AntiUnderGround = true,
+        Reverse = false,
+        AutoResolver = {
+            On = false,
+            ResolverPriority = "Resolver V2 Priority",
+            MaxSpeed = 35,
+        },
+    },
+    Onshot = {
+        Visuals = {
+            Toggle = false,
+            Color = Color3.fromRGB(119,0,255),
+            Material = "ForceField",
+            Life = 1,
+        },
+        Sound = {
+            Toggle = false,
+            ID = 12413331,
+        },
+    },
+    Selection = {
+        ["Check-For-Part"] = "HumanoidRootPart",
+        FOV = {
+            Toggle = true,
+            Color = Color3.fromRGB(255,0,0),
+            Size = 100,
+            Thickness = 2,
+            Filled = false,
+            Transparency = 0,
+            Rainbow = false,
+        },
+        VisibilityCheck = false,
+        DownCheck = false,
+        DistancePriority = false,
+        Unlocks = {
+            OOFOV = false,
+            Down = false,
+        },
+    },
+    Visuals = {
+        Dot = {
+            Toggle = true,
+            Color = Color3.fromRGB(119,0,255),
+            Rainbow = false,
+        },
+        Tracer = {
+            Toggle = false,
+            Color = Color3.fromRGB(119,0,255),
+            Rainbow = false,
+        },
+        Highlight = {
+            Toggle = false,
+            Color = Color3.fromRGB(119,0,255),
+            Rainbow = false,
+        },
+        PredictionLine = {
+            Toggle = false,
+            Color = Color3.fromRGB(255,0,0),
+            Rainbow = false,
+            Width = 0.2,
+            Material = "ForceField",
+        },
+        FakeHitbox = false,
+        TargetInfo = false,
+    },
+    TriggerBot = {
+        Toggle = false,
+        Delay = 0, -- 1000 in gui = 1 here (1 in gui is 0.001 delay aka 1ms idek if lua goes that low but gl blud)
+    },
+    AutoShoot = {
+        Toggle = false,
+        Mode = "Offensive", -- "Offensive" or "Defensive"
+    },
+    Orbit = {
+        Toggle = false,
+        DistanceLimiter = false, -- true for hood modded
+        DistanceLimit = 40, -- 30-50 for Hood Modded
+        Speed = 8,
+        Size = 8,
+        Height = 0,
+        VVT = false, -- VV = Vertical Velocity
+        VVS = 0,
+        HVT = false, -- HV = Horizontal Velocity
+        HVS = 0,
+    },
+    AntiAimViewer = { -- Kinda ass, its based on your position and where you're going (MovementOffset)
+        Toggle = false,
+        BackwardsOffset = 35,
+        MovementOffset = 0,
+        V2 = false,
+    },
+    GunFOV={
+        Toggle=false,
+        Default=100,
+        DB=100,
+        Revolver=100,
+        AK47=100,
+        TacticalShotgun=100,
+        Shotgun=100,
+        SMG=100,
+        Silencer=100,
+        SilencerAR=100,
+        P90=100,
+        LMG=100,
+        AUG=100,
+        AR=100,
+    },
+    HoodDuels = false,
+    Randomization = {
+        Toggle = false,
+        XVal = 23,
+        YVal = 23,
+        ZVal = 23,
+    },
+    Extras = {
+        ReloadOnDown = false,
+        TpAfterDown = false,
+        UnlockOnSelfDown = false,
+        RangePred = {
+            Silent = false,
+            Tracer = false,
+            Short = 0.14284,
+            Mid = 0.125313,
+            Long = 0.1,
+        },
+        CustomPred = {
+            SilentCustomAutoPred = false,
+            TracerCustomAutoPred = false,
+            P200 = 0.171185,
+            P190 = 0.1694982,
+            P180 = 0.167513,
+            P170 = 0.164713,
+            P160 = 0.16142,
+            P150 = 0.157041,
+            P140 = 0.154313,
+            P130 = 0.151692,
+            P120 = 0.14917,
+            P110 = 0.146,
+            P100 = 0.1384,
+            P90 = 0.1368,
+            P80 = 0.1344,
+            P70 = 0.1314,
+            P60 = 0.125923,
+            P50 = 0.122591,
+            P40 = 0.12566,
+            P30 = 0.112,
+            P20 = 0.086,
+            P10 = 0.051,
+        },
+    },
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nyulachan/nyula/main/Standalones/Streamable", true))()
